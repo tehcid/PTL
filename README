@@ -14,6 +14,7 @@ How to use
 ----------
 
 1. Extract all files and upload to an accessible folder on your webserver.
+   The 'templates' folder contains an example template and content files.
 2. Edit config.php and change any variables.
 3. Create a new template file in the templates folder (default is 'templates'
    in the base path). Use %CONTENT% in place of where you would find content 
@@ -22,7 +23,7 @@ How to use
 4. Create content files with the prefix 'cnt_' and the suffix '.html'. For 
    example, 'cnt_home.html' is loaded when you visit [your-website.com/home].
     
-   Use %IMGDIR% in place of your image directory.
-   Use %CSSDIR% in place of your CSS directory.
+   Use %IMGDIR% in place of your image directory, local to the template folder.
+   Use %CSSDIR% in place of your CSS directory, local to the template folder.
 
    See the example files provided for guidance.
