@@ -20,8 +20,9 @@
     // grab template contents
     $template = @file_get_contents('tpl_template.html');
 
-    if($template)
+    if(!$template)
     {
+        // validate template file
         if(!strpos($template, '%CONTENT%'))
             die('%CONTENT% not found in template.');
 
