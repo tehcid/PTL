@@ -1,0 +1,9 @@
+TODO:
+
+[config.php]
+    - debug switch
+    - clean up folder variables, get rid of ending slashes
+    - customisable prefixes/suffixes?
+
+[index.php]
+    - need to embed page titles in content files somehow
