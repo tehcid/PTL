@@ -2,18 +2,14 @@
     if(!defined('IN_PTL'))
         die('Cannot access this file directly.');
 
-    // error reporting
-    error_reporting(E_ALL);
+    // template to load
+    $config['site_template'] = 'tpl_default.html';
 
-    /*
-        TODO:
-
-        - folder variables?
-        - debug switch
-    */
-
-    // folder settings
+    // default content if no page specified or matching
+    $config['default_content'] = 'cnt_default.html';
+    
+    // folder settings, relative to base path
     $config['folder_templates'] = 'templates';
-    $config['folder_images'] = 'templates/images';
+    $config['folder_images'] = 'templates/img';
     $config['folder_css'] = 'templates/css';
 ?>
