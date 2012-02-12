@@ -1,0 +1,28 @@
+PTL: PHP Template Loader
+------------------------
+
+The PTL is designed to be a quickly-deployable template loader for basic static
+websites. The .htaccess file provides some simple rewriting/piping to allow
+easy access to content files.
+
+Eg. a user visits [your-website.com/about], the PTL then checks to see if a
+content page exists for about, and either displays it within a given template,
+or displays the default content page.
+
+
+How to use
+----------
+
+1. Extract all files and upload to an accessible folder on your webserver.
+2. Edit config.php and change any variables.
+3. Create a new template file in the templates folder (default is 'templates'
+   in the base path). Use %CONTENT% in place of where you would find content 
+   within your design. See the example template 'tpl_default.html' for 
+   guidance.
+4. Create content files with the prefix 'cnt_' and the suffix '.html'. For 
+   example, 'cnt_home.html' is loaded when you visit [your-website.com/home].
+    
+   Use %IMGDIR% in place of your image directory.
+   Use %CSSDIR% in place of your CSS directory.
+
+   See the example files provided for guidance.
