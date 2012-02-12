@@ -1,12 +1,9 @@
 <?php
-
-/*
-    TODO:
-
-
-*/
+    error_reporting(E_ALL);
 
     define('IN_PTL', true);
+
+    // load user config file
     require('config.php');
 
     // does the templates folder actually exist?
@@ -18,7 +15,7 @@
         die("Insufficient access to templates folders \"{$config['folder_templates']}\".");
 
     // grab template contents
-    $template = @file_get_contents('tpl_template.html');
+    $template = @file_get_contents($config['site_template']);
 
     if($template)
     {
@@ -35,12 +32,12 @@
             $found = false;
 
             // attempt to load a specified page
-            if($page and $page != "default" and $page != "template")
+            if($page)
             {
                 while(($file = readdir($dh)) !== false)
                 {
                     // traverse through candidate templates
-                    if(substr($file, 0, 4) == "tpl_" and substr($file, 4) != "template.html")
+                    if(substr($file, 0, 4) == "cnt_")
                     {
                         $parts = explode(".", substr($file, 4));
 
@@ -61,10 +58,10 @@
 
             if(!$found)
             {
-                $content = @file_get_contents('tpl_default.html');
+                $content = @file_get_contents($config['default_content']);
 
                 if(!$content)
-                    die('Default template file tpl_default.html not found.');
+                    die("Default content file \"{$config['default_content']}\" not found.");
             }
         }
 
