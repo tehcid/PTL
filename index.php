@@ -68,6 +68,7 @@
         $template = str_replace('%CONTENT%', $content, $template);
         $template = str_replace('%IMGDIR%', $config['folder_images'], $template);
         $template = str_replace('%CSSDIR%', $config['folder_css'], $template);
+        $template = str_replace('%JSDIR%', $config['folder_js'], $template);
 
         print $template;
     }

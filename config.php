@@ -12,4 +12,5 @@
     $config['folder_templates'] = 'templates';
     $config['folder_images'] = 'templates/img';
     $config['folder_css'] = 'templates/css';
+    $config['folder_js'] = 'templates/js';
 ?>
