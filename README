@@ -25,5 +25,6 @@ How to use
     
    Use %IMGDIR% in place of your image directory, local to the template folder.
    Use %CSSDIR% in place of your CSS directory, local to the template folder.
+   Use %JSDIR% in place of your JavaScript directory, local to the template folder.
 
    See the example files provided for guidance.
